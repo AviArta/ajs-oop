@@ -1,8 +1,8 @@
-import Character from ".Caracter";
+import Character from "./Character";
 
 export default class Zombie extends Character {
     constructor(name) {
-        super(name, type="Zombie");
+        super(name, "Zombie");
         this.attack = 40;
         this.defence = 10;
     }
