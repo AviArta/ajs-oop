@@ -17,4 +17,23 @@ export default class Character {
     this.attack = 0;
     this.defence = 0;
     }
+
+    levelUp() {
+        if (this.health === 0) {
+            throw new Error("Нельзя повысить левел умершего.");
+        }
+        this.level += 1;
+        this.attack *= 1.20;
+        this.defence *= 1.20;
+        this.health = 100;
+        return this;
+    }
+
+    damage(points) {
+        if (this.health < 0) {
+            throw new Error("Нельзя применить изменение жизни для умершего.");
+        }
+        this.health -= points * (1 - this.defence / 100);
+        return this;
+    }
 }

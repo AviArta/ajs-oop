@@ -15,3 +15,7 @@ test("check create object Magician", () => {
   // eslint-disable-next-line no-undef
   expect(magician).toEqual(expectedValue);
 });
+
+const magician1 = new Magician("Magi");
+magician1.damage(10);
+console.log(magician1);
