@@ -9,8 +9,8 @@ test("check create object of class Character", () => {
                         type: "Undead", 
                         health: 100, 
                         level: 1,
-                        attack: 0,
-                        defence: 0};
+                        attack: null,
+                        defence: null};
     // eslint-disable-next-line no-undef
     expect(angel).toEqual(expectedValue) ;
 });
